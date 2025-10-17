@@ -41,7 +41,7 @@ export default async function OgImage() {
           }}
         >
           <img
-            // @ts-ignore
+            // @ts-expect-error - ImageResponse is not typed correctly
             src={logoData}
             alt="Maven Green Energy Logo"
             width="400"
