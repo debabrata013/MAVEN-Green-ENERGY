@@ -1,7 +1,6 @@
 "use client"
 
 import Navigation from "@/components/navigation"
-import { useEffect, useState } from "react"
 import Link from "next/link"
 
 export default function OurPresence() {
