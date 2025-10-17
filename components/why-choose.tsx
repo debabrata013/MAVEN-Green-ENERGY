@@ -42,7 +42,7 @@ export default function WhyChoose() {
             Why Choose MAVEN Green Energy
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Leading India's solar revolution with cutting-edge technology and unmatched service excellence
+            Leading India&apos;s solar revolution with cutting-edge technology and unmatched service excellence
           </p>
         </div>
 

@@ -70,7 +70,7 @@ export default function SignupPage() {
           </div>
 
           <p className="text-center text-gray-600 mt-8">
-            We'll contact you within 24 hours with your personalized solar quote.
+            We&apos;ll contact you within 24 hours with your personalized solar quote.
           </p>
         </div>
       </div>

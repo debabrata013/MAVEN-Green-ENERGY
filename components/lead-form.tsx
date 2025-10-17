@@ -172,7 +172,7 @@ export default function LeadForm() {
                 className="mt-1 w-4 h-4 rounded border-gray-300 focus:ring-[#00ff88]"
               />
               <span>
-                I agree to MAVEN Green Energy's <span className="font-semibold">terms of service</span> &{" "}
+                I agree to MAVEN Green Energy&apos;s <span className="font-semibold">terms of service</span> &{" "}
                 <span className="font-semibold">privacy policy</span>
               </span>
             </label>

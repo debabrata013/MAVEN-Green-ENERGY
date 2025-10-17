@@ -5,13 +5,6 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 
 export default function OurPresence() {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   const locations = [
     { city: "Mumbai", region: "Western India", customers: "15,000+", projects: "3,200+" },

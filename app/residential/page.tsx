@@ -12,7 +12,7 @@ export default function ResidentialPage() {
             <h1 className="text-5xl font-bold text-[#001a4d] mb-6 text-balance">Residential Solar Solutions</h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
               Transform your home with clean, renewable energy. Our residential solar systems are designed to reduce
-              your electricity bills and increase your home's value.
+              your electricity bills and increase your home&apos;s value.
             </p>
             <Link
               href="/signup"
@@ -52,7 +52,7 @@ export default function ResidentialPage() {
               },
               {
                 title: "24/7 Monitoring",
-                description: "Real-time monitoring of your system's performance and efficiency.",
+                description: "Real-time monitoring of your system&apos;s performance and efficiency.",
                 icon: "📊",
               },
             ].map((feature, idx) => (
