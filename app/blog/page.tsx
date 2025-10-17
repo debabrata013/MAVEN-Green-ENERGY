@@ -33,7 +33,7 @@ export default function BlogPage() {
       <Navigation />
       <div className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-[#00d4ff] mb-6 text-balance">SolarSquare Blog</h1>
+          <h1 className="text-5xl font-bold text-[#00d4ff] mb-6 text-balance">MAVEN Blog</h1>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl">
             Stay informed with the latest solar energy news, tips, and industry insights.
           </p>

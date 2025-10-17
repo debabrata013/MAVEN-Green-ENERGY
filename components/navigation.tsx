@@ -57,7 +57,7 @@ export default function Navigation() {
           >
             <Image
               src="/logo.png"
-              alt="SolarSquare Logo"
+              alt="MAVEN Logo"
               width={320}
               height={100}
               className="h-14 md:h-20 w-auto"

@@ -8,7 +8,7 @@ const newsCards = [
     id: 1,
     image: "https://placehold.co/400x220/E0F7FA/000000?text=News+Image",
     source: "DEC 12, 2024 - FORBES",
-    headline: "SolarSquare Revolutionizes Rooftop Solar with WindPro Technology",
+    headline: "MAVEN Revolutionizes Rooftop Solar with WindPro Technology",
   },
   {
     id: 2,

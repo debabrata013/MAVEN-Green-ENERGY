@@ -6,9 +6,9 @@ export default function AboutPage() {
       <Navigation />
       <div className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-[#001a4d] mb-6 text-balance">About SolarSquare</h1>
+          <h1 className="text-5xl font-bold text-[#001a4d] mb-6 text-balance">About MAVEN</h1>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl">
-            For 10 years, SolarSquare has been leading the solar revolution, helping thousands of homes and businesses
+            For 10 years, MAVEN has been leading the solar revolution, helping thousands of homes and businesses
             transition to clean, renewable energy.
           </p>
 

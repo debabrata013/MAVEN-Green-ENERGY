@@ -38,7 +38,7 @@ export default function OurPresence() {
 
       <section className="py-20 px-4 bg-[#f0f9f6]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#2d7a4a] mb-4 text-center scroll-fade-in">SolarSquare Locations</h2>
+          <h2 className="text-4xl font-bold text-[#2d7a4a] mb-4 text-center scroll-fade-in">MAVEN Locations</h2>
           <p className="text-xl text-center text-gray-700 mb-12 scroll-fade-in">
             We offer solar services in 20+ Indian cities, and are expanding every day!
           </p>

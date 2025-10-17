@@ -71,7 +71,7 @@ export default function ResidentialPage() {
           <div className="bg-gradient-to-r from-[#001a4d] to-[#003d99] text-white p-12 rounded-lg text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Go Solar?</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of homeowners saving money with SolarSquare. Get a free consultation today.
+              Join thousands of homeowners saving money with MAVEN. Get a free consultation today.
             </p>
             <Link
               href="/signup"

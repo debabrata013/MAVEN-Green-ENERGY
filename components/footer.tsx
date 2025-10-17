@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-[#00ff88]">SolarSquare</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#00ff88]">MAVEN</h3>
             <p className="text-gray-300 mb-4">Leading solar energy solutions for a sustainable future across India.</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-[#00ff88] transition-colors">
@@ -106,7 +106,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-3 items-start">
                 <Mail size={20} className="text-[#00ff88] mt-1 flex-shrink-0" />
-                <p className="text-gray-300">info@solarsquare.com</p>
+                <p className="text-gray-300">info@maven.com</p>
               </div>
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="text-[#00ff88] mt-1 flex-shrink-0" />
@@ -171,7 +171,7 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="bg-[#0a3d2a] border-t border-[#00ff88]/20">
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; 2025 SolarSquare. All rights reserved.</p>
+          <p>&copy; 2025 MAVEN. All rights reserved.</p>
           <p>Powering India with Clean Energy</p>
         </div>
       </div>

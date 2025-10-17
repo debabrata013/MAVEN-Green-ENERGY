@@ -30,7 +30,7 @@ export default function Locations() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0d5f3f] mb-4">
-            SolarSquare Locations Across India
+            MAVEN Locations Across India
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Serving 25+ cities with 10,000+ successful solar installations nationwide
@@ -42,7 +42,7 @@ export default function Locations() {
           <div className="relative">
             <Image
               src="/india-map.jpg"
-              alt="India Map - SolarSquare Coverage"
+              alt="India Map - MAVEN Coverage"
               width={600}
               height={400}
               className="w-full h-auto rounded-2xl shadow-2xl"
