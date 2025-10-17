@@ -10,6 +10,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://maven-green-energy.vercel.app'),
   title: "Maven Green Energy - Sustainable Solar Solutions",
   description: "Leading provider of residential, commercial, and industrial solar energy solutions. Harness the power of the sun with Maven Green Energy for a sustainable future.",
   generator: "Maven Green Energy",
