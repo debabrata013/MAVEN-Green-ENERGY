@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarSquare - Cyclone-Proof Solar Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-dark {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .carousel-scroll {
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+        }
+        .india-map {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        .dot-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .dot-indicator.active {
+            background-color: #06b6d4;
+            width: 24px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="text-lg font-bold text-slate-900">
+                    10 Years of Solar Square
+                </div>
+                
+                <!-- Menu Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <div class="relative group">
+                        <button class="text-slate-700 hover:text-cyan-500 flex items-center gap-1 transition">
+                            Our Offerings
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-slate-700 hover:text-cyan-500 flex items-center gap-1 transition">
+                            Solar Solutions
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#" class="text-slate-700 hover:text-cyan-500 transition">Our Presence</a>
+                    <a href="#" class="text-slate-700 hover:text-cyan-500 transition">Blog</a>
+                    <div class="relative group">
+                        <button class="text-slate-700 hover:text-cyan-500 flex items-center gap-1 transition">
+                            More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <button class="hidden md:flex items-center gap-2 bg-slate-900 text-white px-6 py-2 rounded-lg hover:bg-slate-800 transition">
+                    Sign up for free electricity
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-slate-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-12 md:pt-32 md:pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://placehold.co/1920x600/1e293b/06b6d4?text=Rooftop+Solar+Installation" alt="Solar installation" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Cyclone-proof solar systems
+            </h1>
+            <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
+                Our SolarSquare WindPro Mount™ is so well built it can handle heavy rain, scary storms and even cyclones with 170 kmph wind speeds.
+            </p>
+            <button class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold px-8 py-3 rounded-lg transition mb-12">
+                Get a quote
+            </button>
+
+            <!-- Pagination Dots -->
+            <div class="flex justify-center gap-2">
+                <div class="dot-indicator active"></div>
+                <div class="dot-indicator"></div>
+                <div class="dot-indicator"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Generation Form Section -->
+    <section class="py-16 md:py-24 gradient-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Left Column -->
+                <div class="text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Schedule a <span class="text-cyan-500">FREE</span> consultation with us today!
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Get genuine advice from our solar experts. No pressure, book only if you are satisfied!
+                    </p>
+                </div>
+
+                <!-- Right Column - Form -->
+                <div class="bg-white rounded-lg p-8 shadow-xl">
+                    <form class="space-y-4">
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-900 mb-2">Full Name</label>
+                            <input type="text" placeholder="Your name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+
+                        <!-- WhatsApp Number -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-900 mb-2">WhatsApp number</label>
+                            <input type="tel" placeholder="+91 XXXXX XXXXX" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+
+                        <!-- Pin Code -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-900 mb-2">Pin code</label>
+                            <input type="text" placeholder="XXXXXX" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+
+                        <!-- City -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-900 mb-2">City</label>
+                            <input type="text" placeholder="Your city" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-900 mb-2">Email</label>
+                            <input type="email" placeholder="your@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+
+                        <!-- Monthly Electricity Bill -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-900 mb-3">Monthly Electricity Bill *</label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="bill" class="mr-2" required>
+                                    <span class="text-sm">{'< ₹1500'}</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="bill" class="mr-2" required>
+                                    <span class="text-sm">₹1500 - ₹2500</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="bill" class="mr-2" required>
+                                    <span class="text-sm">₹2500 - ₹4000</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="bill" class="mr-2" required>
+                                    <span class="text-sm">₹4000 - ₹6000</span>
+                                </label>
+                                <label class="flex items-center col-span-2">
+                                    <input type="radio" name="bill" class="mr-2" required>
+                                    <span class="text-sm">More than ₹6000</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div class="flex items-start">
+                            <input type="checkbox" id="terms" class="mt-1 mr-2" required>
+                            <label for="terms" class="text-sm text-slate-700">
+                                I agree to SolarSquare's <span class="italic">terms of service</span> & <span class="italic">privacy policy</span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold py-3 rounded-lg transition">
+                            Yes! Reduce my electricity bill
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-16">
+                Why choose SolarSquare for your solar installation
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Easy Financing Plans</h3>
+                            <p class="text-gray-600">Flexible payment options tailored to your budget and needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Cyclone-Proof, Safe Rooftop Solar</h3>
+                            <p class="text-gray-600">Built to withstand extreme weather conditions and wind speeds up to 170 kmph.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">₹1 Lakh Guarantee Against Water Leakage</h3>
+                            <p class="text-gray-600">Complete protection and peace of mind with our comprehensive guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">5-Year Professional Maintenance Included</h3>
+                            <p class="text-gray-600">Expert maintenance and support to keep your system running optimally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold px-8 py-3 rounded-lg transition">
+                    Know More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- In the News Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+                In the News
+            </h2>
+
+            <!-- Carousel -->
+            <div class="relative">
+                <div class="carousel-scroll flex gap-6 overflow-x-auto pb-4">
+                    <!-- News Card 1 -->
+                    <div class="carousel-item flex-shrink-0 w-full md:w-1/3">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                            <img src="https://placehold.co/400x220/E0F7FA/000000?text=News+Image" alt="News" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-cyan-600 font-semibold mb-2">DEC 12, 2024 - FORBES</p>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">SolarSquare Expands to 20+ Indian Cities</h3>
+                                <a href="#" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 2 -->
+                    <div class="carousel-item flex-shrink-0 w-full md:w-1/3">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                            <img src="https://placehold.co/400x220/E0F7FA/000000?text=News+Image" alt="News" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-cyan-600 font-semibold mb-2">DEC 08, 2024 - TECHCRUNCH</p>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Revolutionary WindPro Mount Technology Launched</h3>
+                                <a href="#" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 3 -->
+                    <div class="carousel-item flex-shrink-0 w-full md:w-1/3">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                            <img src="https://placehold.co/400x220/E0F7FA/000000?text=News+Image" alt="News" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-cyan-600 font-semibold mb-2">DEC 01, 2024 - ECONOMIC TIMES</p>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Solar Energy Adoption Reaches New Heights in India</h3>
+                                <a href="#" class="text-cyan-500 hover:text-cyan-600 font-semibold">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicators -->
+                <div class="flex justify-center gap-2 mt-6">
+                    <div class="dot-indicator active"></div>
+                    <div class="dot-indicator"></div>
+                    <div class="dot-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SolarSquare Locations Section -->
+    <section class="py-16 md:py-24 bg-gray-50 relative">
+        <!-- Subtle grid pattern background -->
+        <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(0deg, transparent 24%, rgba(6, 182, 212, .05) 25%, rgba(6, 182, 212, .05) 26%, transparent 27%, transparent 74%, rgba(6, 182, 212, .05) 75%, rgba(6, 182, 212, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(6, 182, 212, .05) 25%, rgba(6, 182, 212, .05) 26%, transparent 27%, transparent 74%, rgba(6, 182, 212, .05) 75%, rgba(6, 182, 212, .05) 76%, transparent 77%, transparent); background-size: 50px 50px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    SolarSquare locations
+                </h2>
+                <p class="text-lg text-gray-600">
+                    We offer solar services in 20+ Indian cities, and are expanding every day!
+                </p>
+            </div>
+
+            <!-- Map Visualization -->
+            <div class="flex justify-center mb-12">
+                <svg class="india-map" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simplified India outline -->
+                    <path d="M 150 100 L 200 80 L 220 100 L 230 150 L 220 200 L 200 220 L 180 210 L 160 200 L 150 150 Z" fill="none" stroke="#0f172a" stroke-width="2"/>
+                    
+                    <!-- Highlighted regions -->
+                    <circle cx="120" cy="180" r="25" fill="#06b6d4" opacity="0.3"/>
+                    <circle cx="180" cy="150" r="25" fill="#06b6d4" opacity="0.3"/>
+                    <circle cx="200" cy="200" r="25" fill="#06b6d4" opacity="0.3"/>
+                    <circle cx="160" cy="240" r="25" fill="#06b6d4" opacity="0.3"/>
+                    
+                    <!-- Location pins -->
+                    <circle cx="120" cy="180" r="6" fill="#06b6d4"/>
+                    <circle cx="180" cy="150" r="6" fill="#06b6d4"/>
+                    <circle cx="200" cy="200" r="6" fill="#06b6d4"/>
+                    <circle cx="160" cy="240" r="6" fill="#06b6d4"/>
+                </svg>
+            </div>
+
+            <!-- City Cards Grid -->
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Gujarat -->
+                <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition text-center">
+                    <svg class="w-12 h-12 text-cyan-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h3 class="font-bold text-slate-900 mb-3">Gujarat</h3>
+                    <p class="text-sm text-gray-600">Ahmedabad, Surat, Vadodara, Rajkot</p>
+                </div>
+
+                <!-- Maharashtra -->
+                <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition text-center">
+                    <svg class="w-12 h-12 text-cyan-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h3 class="font-bold text-slate-900 mb-3">Maharashtra</h3>
+                    <p class="text-sm text-gray-600">Mumbai, Pune, Nagpur, Aurangabad</p>
+                </div>
+
+                <!-- Karnataka -->
+                <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition text-center">
+                    <svg class="w-12 h-12 text-cyan-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h3 class="font-bold text-slate-900 mb-3">Karnataka</h3>
+                    <p class="text-sm text-gray-600">Bangalore, Mysore, Hubli, Belgaum</p>
+                </div>
+
+                <!-- Tamil Nadu -->
+                <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition text-center">
+                    <svg class="w-12 h-12 text-cyan-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h3 class="font-bold text-slate-900 mb-3">Tamil Nadu</h3>
+                    <p class="text-sm text-gray-600">Chennai, Coimbatore, Madurai, Salem</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold mb-4">SolarSquare</h4>
+                    <p class="text-gray-400 text-sm">10 Years of trusted solar solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-500">About Us</a></li>
+                        <li><a href="#" class="hover:text-cyan-500">Careers</a></li>
+                        <li><a href="#" class="hover:text-cyan-500">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-500">Contact</a></li>
+                        <li><a href="#" class="hover:text-cyan-500">FAQ</a></li>
+                        <li><a href="#" class="hover:text-cyan-500">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-500">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-cyan-500">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 SolarSquare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
