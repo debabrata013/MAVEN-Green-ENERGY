@@ -49,7 +49,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl bg-white/70 backdrop-blur-md border border-gray-200/50 z-50 shadow-xl rounded-2xl">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 md:h-24">
+        <div className="flex justify-between items-center h-24 md:h-32">
           {/* Logo */}
           <Link
             href="/"
@@ -58,9 +58,9 @@ export default function Navigation() {
             <Image
               src="/logo.png"
               alt="MAVEN Logo"
-              width={320}
-              height={100}
-              className="h-14 md:h-20 w-auto"
+              width={400}
+              height={125}
+              className="h-20 md:h-28 w-auto"
             />
           </Link>
 
